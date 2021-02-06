@@ -1,0 +1,422 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ECEFF1;
+}
+
+main {
+    margin: auto;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sprite {
+    width: 505px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.sprite-icon {
+    cursor: pointer;
+    filter: opacity(0.7);
+}
+
+.sprite-icon:hover {
+    filter: none;
+}
+
+.rotate-wrapper {
+    margin: auto;
+}
+
+.scale-wrapper,
+.rotate-wrapper,
+.flip-wrapper,
+.photo-wrapper {
+    transition-duration: 1s;
+}
+
+.rotate-wrapper {
+    align-self: center;
+    width: 505px;
+    height: 505px;
+}
+
+.photo-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.cat-photo {
+    width: 400px;
+    height: 505px;
+    object-fit: cover;
+    object-position: center;
+
+    margin: auto;
+
+    border-radius: 8px;
+}
+
+.cat-photo-clear {
+    width: 400px;
+    height: 505px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin: auto;
+
+    display: none;
+}
+
+.filters {
+    align-self: center;
+    margin-top: 69px;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter {
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-desc {
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.filter-photo {
+    margin-right: 5px;
+    width: 136px;
+    height: 136px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.photo-blur-filter {
+    filter: blur(3px);
+}
+
+.photo-bw-filter {
+    filter: grayscale(1);
+}
+
+.photo-sepia-filter {
+    filter: sepia(1);
+}
+
+.photo-blue-filter {
+    filter: hue-rotate(200deg);
+}
+
+.photo-negative-filter {
+    filter: invert(100%);
+}
+
+.filter-input,
+.action-input,
+.arrow-input {
+    display: none;
+}
+
+.blur-filter-input:checked ~ .rotate-wrapper .cat-photo {
+    animation: blur-filter-anim 1s linear forwards;
+}
+
+.blur-filter-input:checked ~ .filters .blur-filter .filter-desc {
+    font-weight: bold;
+}
+
+@keyframes blur-filter-anim {
+    to {
+        filter: blur(3px);
+    }
+}
+
+.no-filter-input:checked ~ .rotate-wrapper .cat-photo {
+    animation: no-filter-anim 1s linear forwards;
+}
+
+.no-filter-input:checked ~ .filters .no-filter .filter-desc {
+    font-weight: bold;
+}
+
+@keyframes no-filter-anim {
+    to {
+        filter: none;
+    }
+}
+
+.bw-filter-input:checked ~ .rotate-wrapper .cat-photo {
+    animation: bw-filter-anim 1s linear forwards;
+}
+
+.bw-filter-input:checked ~ .filters .bw-filter .filter-desc {
+    font-weight: bold;
+}
+
+@keyframes bw-filter-anim {
+    to {
+        filter: grayscale(1);
+    }
+}
+
+.sepia-filter-input:checked ~ .rotate-wrapper .cat-photo {
+    animation: sepia-filter-anim 1s linear forwards; 
+}
+
+.sepia-filter-input:checked ~ .filters .sepia-filter .filter-desc {
+    font-weight: bold;
+}
+
+@keyframes sepia-filter-anim {
+    to {
+        filter: sepia(1);
+    }
+}
+
+.blue-filter-input:checked ~ .rotate-wrapper .cat-photo {
+    animation: blue-filter-anim 1s linear forwards;
+}
+
+.blue-filter-input:checked ~ .filters .blue-filter .filter-desc {
+    font-weight: bold;
+}
+
+@keyframes blue-filter-anim {
+    to {
+        filter: hue-rotate(200deg);
+    }
+}
+
+.negative-filter-input:checked ~ .rotate-wrapper .cat-photo {
+    animation: neg-filter-anim 1s linear forwards;
+}
+
+.negative-filter-input:checked ~ .filters .negative-filter .filter-desc {
+    font-weight: bold;
+}
+
+@keyframes neg-filter-anim {
+    to {
+        filter: invert(100%);
+    }
+}
+
+.action-fit:checked ~ .rotate-wrapper .cat-photo {
+    width: 100%;
+    height: 100%;
+}
+
+.rotate180-label,
+.rotate270-label,
+.rotate360-label {
+    display: none;
+}
+
+.actinon-rotate90deg:checked ~ .rotate-wrapper {
+    transform: rotate(-90deg);
+}
+
+.actinon-rotate90deg:checked ~ .sprite .rotate180-label {
+    display: block;
+}
+
+.actinon-rotate90deg:checked ~ .sprite .rotate90-label {
+    display: none;
+}
+
+.actinon-rotate90deg:checked ~ .sprite .rotate270-label {
+    display: none;
+}
+
+.actinon-rotate90deg:checked ~ .sprite .rotate360-label {
+    display: none;
+}
+
+.actinon-rotate180deg:checked ~ .rotate-wrapper {
+    transform: rotate(-180deg);
+}
+
+.actinon-rotate180deg:checked ~ .sprite .rotate270-label {
+    display: block;
+}
+
+.actinon-rotate180deg:checked ~ .sprite .rotate90-label {
+    display: none;
+}
+
+.actinon-rotate180deg:checked ~ .sprite .rotate180-label {
+    display: none;
+}
+
+.actinon-rotate180deg:checked ~ .sprite .rotate360-label {
+    display: none;
+}
+.actinon-rotate270deg:checked ~ .rotate-wrapper {
+    transform: rotate(-270deg);
+}
+
+.actinon-rotate270deg:checked ~ .sprite .rotate360-label {
+    display: block;
+}
+
+.actinon-rotate270deg:checked ~ .sprite .rotate90-label {
+    display: none;
+}
+
+.actinon-rotate270deg:checked ~ .sprite .rotate270-label {
+    display: none;
+}
+
+.actinon-rotate270deg:checked ~ .sprite .rotate180-label {
+    display: none;
+}
+
+.actinon-rotate360deg:checked ~ .rotate-wrapper {
+    transform: rotate(-360deg);
+}
+
+.actinon-rotate360deg:checked ~ .sprite .rotate90-label {
+    display: block;
+}
+
+.actinon-rotate360deg:checked ~ .sprite .rotate180-label {
+    display: none;
+}
+
+.actinon-rotate360deg:checked ~ .sprite .rotate270-label {
+    display: none;
+}
+
+.actinon-rotate360deg:checked ~ .sprite .rotate360-label {
+    display: none;
+}
+
+
+.action-flip:checked ~ .rotate-wrapper .flip-wrapper {
+    transform: scaleX(-1);
+}
+
+.scale-1:checked ~ .sprite .scale075-label {
+    display: block;
+}
+
+.scale-1:checked ~ .sprite .scale1-label {
+    display: none;
+}
+
+.scale-1:checked ~ .sprite .scale05-label {
+    display: none;
+}
+
+.scale-1:checked ~ .rotate-wrapper .scale-wrapper {
+    transform: scale(1);
+}
+
+/* */
+
+.scale-075:checked ~ .sprite .scale075-label {
+    display: none;
+}
+
+.scale-075:checked ~ .sprite .scale1-label {
+    display: none;
+}
+
+.scale-075:checked ~ .sprite .scale05-label {
+    display: block;
+}
+
+.scale-075:checked ~ .rotate-wrapper .scale-wrapper {
+    transform: scale(0.75);
+}
+
+/* */
+
+.scale-05:checked ~ .sprite .scale075-label {
+    display: none;
+}
+
+.scale-05:checked ~ .sprite .scale1-label {
+    display: block;
+}
+
+.scale-05:checked ~ .sprite .scale05-label {
+    display: none;
+}
+
+.scale-05:checked ~ .rotate-wrapper .scale-wrapper {
+    transform: scale(0.5);
+}
+
+.logo-input:checked ~ .rotate-wrapper {
+    display: none;
+}
+
+.logo-input:checked ~ .cat-photo-clear {
+    display: block;
+}
+
+.arrow-label {
+    align-self: center;
+}
+
+.arrow-icon {
+    width: 40px;
+    margin-top: 45px;
+
+    cursor: pointer;
+}
+
+.arrow-left {
+    margin-right: 34px;
+}
+
+.arrow-right {
+    margin-left: 29px;
+    transform: rotate(180deg);
+}
+
+.no-filter,
+.negative-filter {
+    display: none;
+}
+
+.arrow-left-input:checked ~ .filters .no-filter {
+    display: block;
+}
+
+.arrow-left-input:checked ~ .filters .no-filter {
+    text-align: center;
+}
+
+
+.arrow-left-input:checked ~ .filters .blue-filter {
+    display: none;
+}
+
+.arrow-left-input:checked ~ .filters .arrow-left {
+    filter: contrast(0.01);
+}
+
+.arrow-right-input:checked ~ .filters .negative-filter {
+    display: block;
+}
+
+.arrow-right-input:checked ~ .filters .negative-filter {
+    text-align: center;
+}
+
+.arrow-right-input:checked ~ .filters .blur-filter {
+    display: none;
+}
+
+.arrow-right-input:checked ~ .filters .arrow-right {
+    filter: contrast(0.01);
+}

@@ -1,0 +1,49 @@
+name:                hw1
+version:             0.1.0.0
+synopsis:            Synopsis for task 1
+description:         Task 1 for FP ITMO course
+
+homepage:            https://github.com//fp-homework/tree/master/hw1#readme
+license:             MIT
+license-file:        LICENSE
+author:              Dmitriy Mozhevitin
+maintainer:          dm.mozhevitin@gmail.com
+copyright:           2020 github: DMozhevitin
+
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+tested-with:         GHC == 8.0.1
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     
+                       Block1.Task1
+                       Block1.Task2
+                       Block1.Task3
+                       Block2.Task2
+                       Block3.Task1
+                       Block3.Task2
+  ghc-options:         -Wall
+  build-depends:       base >= 4.9 && < 5
+  default-language:    Haskell2010  
+
+test-suite hw1-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Test.hs
+  other-modules:       Block1Test.Task1Test,
+                       Block1Test.Task2Test,
+                       Block1Test.Task3Test,
+                       Block2Test.Task1Test,
+                       Block2Test.Task2Test,
+                       Block3Test.Task1Test,
+                       Block3Test.Task2Test
+  build-depends:       base
+                     , tasty
+                     , tasty-hunit
+                     , tasty-hspec
+                     , hw1
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010

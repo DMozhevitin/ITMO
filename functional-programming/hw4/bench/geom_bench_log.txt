@@ -1,0 +1,33 @@
+hw4> benchmarks  
+Running 1 benchmarks...
+Benchmark hw4-benchmark: RUNNING...
+benchmarking Geometry benchmark/lazy perimeter on polygon with 10_000_000 points
+time                 6.225 s    (5.108 s .. 6.986 s)
+                     0.995 R²   (0.993 R² .. 1.000 R²)
+mean                 6.164 s    (5.850 s .. 6.397 s)
+std dev              299.9 ms   (22.09 ms .. 372.8 ms)
+variance introduced by outliers: 19% (moderately inflated)
+
+benchmarking Geometry benchmark/strict perimeter on polygon with 10_000_000 points
+time                 1.337 s    (931.9 ms .. 2.284 s)
+                     0.942 R²   (0.911 R² .. 1.000 R²)
+mean                 983.0 ms   (875.7 ms .. 1.168 s)
+std dev              181.5 ms   (5.332 ms .. 223.0 ms)
+variance introduced by outliers: 47% (moderately inflated)
+
+benchmarking Geometry benchmark/lazy double area on polygon with 10_000_000 points
+time                 5.156 s    (4.295 s .. 7.078 s)
+                     0.983 R²   (NaN R² .. 1.000 R²)
+mean                 4.821 s    (4.580 s .. 5.062 s)
+std dev              294.5 ms   (164.5 ms .. 366.9 ms)
+variance introduced by outliers: 19% (moderately inflated)
+
+benchmarking Geometry benchmark/strict double area on polygon with 10_000_000 points
+time                 1.162 s    (687.8 ms .. 1.482 s)
+                     0.982 R²   (0.937 R² .. 1.000 R²)
+mean                 1.064 s    (952.4 ms .. 1.138 s)
+std dev              117.2 ms   (64.32 ms .. 165.5 ms)
+variance introduced by outliers: 23% (moderately inflated)
+
+Benchmark hw4-benchmark: FINISH
+Completed 2 action(s).

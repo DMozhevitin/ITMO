@@ -1,0 +1,39 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s 0 -> id1 0 >
+s 1 -> id1 1 >
+
+id1 1 -> id1 1 >
+id1 0 -> id1 0 >
+id1 + -> id2 + >
+
+id2 1 -> id2 1 >
+id2 0 -> id2 0 >
+id2 _ -> dec _ <
+
+dec 0 -> dec 1 <
+dec 1 -> id2l 0 <
+
+id2l 1 -> id2l 1 <
+id2l 0 -> id2l 0 <
+id2l + -> inc + <
+
+inc 0 -> id1 1 >
+inc 1 -> inc 0 <
+inc _ -> id1 1 >
+
+dec + -> id3 + >
+id3 1 -> id3 1 >
+id3 0 -> id3 0 >
+id3 _ -> erase _ <
+
+erase 0 -> erase _ <
+erase 1 -> erase _ <
+erase + -> id1l _ <
+
+id1l 1 -> id1l 1 <
+id1l 0 -> id1l 0 <
+id1l _ -> ac _ >

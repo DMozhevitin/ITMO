@@ -1,0 +1,59 @@
+name:                hw4
+version:             0.1.0.0
+synopsis:            Synopsis for task 4
+description:         Task 4 for FP ITMO course
+
+homepage:            https://github.com//fp-homework/tree/master/hw4#readme
+license:             MIT
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2020 Author name here
+
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+tested-with:         GHC == 8.0.1
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Task1,
+                       Task1Strict
+                     , Task2
+                     , Task3
+                     , Task6
+                     , Task7
+                     , Task8
+  ghc-options:         -Wall
+  build-depends:       base >= 4.9 && < 5
+                     , parallel
+                     , random
+                     , monad-par
+                     , monad-par-extras
+                     , vector
+                     , hashable
+                     , stm
+                     , directory
+                     , filepath
+                     , microlens
+  default-language:    Haskell2010
+
+test-suite hw4-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , hw4
+  ghc-options:         -Wall -Werror -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+benchmark hw4-benchmark
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      bench
+  main-is:             Main.hs
+  other-modules:       GeometryBenchmark
+                     , MonteCarloBenchmark
+  ghc-options:         -eventlog -O2 -Wall -Werror -rtsopts -threaded -with-rtsopts=-N6
+  build-depends:       base, hw4, criterion, deepseq
+  default-language:    Haskell2010

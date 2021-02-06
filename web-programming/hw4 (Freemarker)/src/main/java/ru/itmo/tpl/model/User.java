@@ -1,0 +1,39 @@
+package ru.itmo.tpl.model;
+
+public class User {
+    private final long id;
+    private final String handle;
+    private final String name;
+    private long postCnt;
+    private final Color color;
+
+    public User(long id, String handle, String name, Color color) {
+        this.id = id;
+        this.handle = handle;
+        this.name = name;
+        this.postCnt = 0;
+        this.color = color;
+    }
+
+    public long getPostCnt() {
+        return postCnt;
+    }
+
+    public void setPostCnt(long cnt) {
+        postCnt = cnt;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getHandle() {
+        return handle;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Color getColor() { return color; }
+}

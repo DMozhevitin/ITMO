@@ -1,0 +1,108 @@
+main .login-form-box {
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    width: 420px;
+    height: 254px;
+    position: relative;
+}
+
+main .login-form-box .body {
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+}
+
+main .login-form-box .header span {
+    padding-left: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #3B5998;
+    font-family: verdana,arial,sans-serif;
+}
+
+main .login-form-box .header {
+    padding-bottom: 2px;
+    border-bottom: 2px solid lightgrey;
+}
+
+main .login-form-box .field {
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+}
+
+main .login-form-box .field .value {
+    display: inline-block;
+    left: 9.2rem;
+    position: absolute;
+}
+
+main .login-form-box .field .name {
+    display: inline-block;
+    font-family: verdana,arial,sans-serif;
+    font-size: 0.8rem;
+}
+
+main .login-form-box .field .value input {
+    width: 13.5rem;
+}
+
+main .login-form-box .field .error {
+    left: 9.2rem;
+    position: absolute;
+    margin-top: 5px;
+    color:red;
+    font-family: verdana,arial,sans-serif;
+    font-size: 0.8rem;
+}
+
+main .login-form-box .checkbox-field {
+    position: absolute;
+    left: 9.2rem;
+    bottom: 6rem;
+    font-family: verdana,arial,sans-serif;
+    font-size: 0.9rem;
+}
+
+main .login-form-box .button-field {
+    position: absolute;
+    left: 9.2rem;
+    bottom: 3rem;
+}
+
+main .login-form-box .button-field input {
+    width: 66px;
+    height: 23px;
+}
+
+main .login-form-box .links {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 2rem;
+}
+
+main .login-form-box .field .name label[for="password"] {
+    position: relative;
+    left: 1.7rem;
+}
+
+main .login-form-box .links a {
+    font-size: 0.9rem;
+    font-family: verdana,arial,sans-serif;
+}
+
+main .footer {
+    position: absolute;
+    bottom: 0.2rem;
+    border-top: 2px solid lightgrey;
+    width: 420px;
+}
+
+main .footer .footer-links  {
+    float: right;
+    margin-right: 8px;
+}
+
+main .footer .footer-links a {
+    font-size: 0.8rem;
+    font-family: verdana,arial,sans-serif;
+    margin-right: 5px;
+}

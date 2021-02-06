@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, serif;
+}
+
+main {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+header {
+  background: white;
+  display: flex;
+  flex-direction: row;
+
+  height: 75px;
+}
+
+.header-logo {
+  margin: auto;
+  width: 250px;
+  height: 50px;
+}
+
+.card {
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  border-radius: 10px;
+  width: 100%;
+  height: calc(100vh - 200px);
+
+  min-height: 600px;
+}
+
+.card-0 {
+  background: url(img/liza.jpg) no-repeat center center;
+}
+
+.card-1 {
+  background: url(img/katya.jpg) no-repeat center center;
+}
+
+.card-2 {
+  background: url(img/olya.jpg) no-repeat center center;
+}
+
+.card-3 {
+  background: url(img/masha.jpg) no-repeat center center;
+}
+
+.card-4 {
+  background: url(img/anya.jpg) no-repeat center center;
+}
+
+.card-5 {
+  background: url(img/antonina.jpg) no-repeat center center;
+}
+
+.card-6 {
+  background: url(img/anzhela.jpg) no-repeat center center;
+}
+
+.card-desc {
+  margin-left: 10vw;
+}
+
+.card-age, .card-name {
+  color: cadetblue;
+  font-size: 36px;
+
+  text-shadow: 0 2px 2px #AAA;
+}
+
+.action-icons {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  bottom: 0;
+  width: 100%;
+}
+
+.action-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+
+  box-shadow: 0 2px 25px 0 #AAAAAA;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.img-badge {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+
+  display: none;
+}
+
+.like-badge {
+  right: 25vw;
+  top: 25vh;
+  transform: rotateZ(20deg);
+}
+
+.dislike-badge {
+  left: 25vw;
+  top: 35vh;
+  transform: rotateZ(-15deg);
+}
+
+.superlike-badge {
+  width: 250px;
+  height: 125px;
+
+  bottom: 40vh;
+}
+
+.icon-button:active {
+  transform: translateY(4px);
+}

@@ -1,0 +1,1 @@
+echo "*/5 * * * 7 ~/os-labs/lab4/script1.sh" | crontab 

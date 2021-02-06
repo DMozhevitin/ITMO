@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>02-about-cats</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+  	  <header>
+  	  	<p class="header-text yandex">Мурмаркет</p>	
+  	  </header>
+    <main>
+    	<article class="carousel">
+    		<!-- card selection inputs -->
+    		<input name="img-selector" type="radio" class="img-selector img1-selector" id="img1-selector">
+    		<input name="img-selector" type="radio" class="img-selector img2-selector" id="img2-selector">
+    		<input name="img-selector" type="radio" class="img-selector img3-selector" id="img3-selector">
+    		<input name="img-selector" type="radio" class="img-selector img4-selector" id="img4-selector">
+    		<input checked name="img-selector" type="radio" class="img-selector img5-selector" id="img5-selector">
+    		<input name="img-selector" type="radio" class="img-selector img6-selector" id="img6-selector">
+    		<input name="img-selector" type="radio" class="img-selector img7-selector" id="img7-selector">
+    		<input name="img-selector" type="radio" class="img-selector img8-selector" id="img8-selector">
+    		<input name="img-selector" type="radio" class="img-selector img9-selector" id="img9-selector">
+    		<input name="img-selector" type="radio" class="img-selector img10-selector" id="img10-selector">
+			
+
+    		<article class="cat-card card-1">
+    			<input class="popup-checkbox" type="checkbox" id="img1-popup" />
+    			<label for="img1-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img1-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/persik.jpg" alt="Персик"/>
+
+    			<p class="cat-name">Персик</p>
+
+    		    <!-- div bcs there is no semantics for this element -->
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/persik.jpg" alt="Персик"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Персик</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img1-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-2">
+    			<input class="popup-checkbox" type="checkbox" id="img2-popup" />
+    			<label for="img2-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img2-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/barsik.jpg" alt="Барсик"/>
+
+    			<p class="cat-name">Барсик</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/barsik.jpg" alt="Барсик"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Барсик</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img2-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-3">
+    			<input class="popup-checkbox" type="checkbox" id="img3-popup" />
+    			<label for="img3-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img3-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/kuzya.jpg" alt="Кузя"/>
+
+    			<p class="cat-name">Кузя</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/kuzya.jpg" alt="Кузя"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Кузя</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img3-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-4">
+    			<input class="popup-checkbox" type="checkbox" id="img4-popup" />
+    			<label for="img4-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img4-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/felix.jpg" alt="Феликс"/>
+
+    			<p class="cat-name">Феликс</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/felix.jpg" alt="Феликс"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Феликс</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img4-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-5">
+    			<input class="popup-checkbox" type="checkbox" id="img5-popup" />
+    			<label for="img5-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img5-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/juja.jpg" alt="Жужа"/>
+
+    			<p class="cat-name">Жужа</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/juja.jpg" alt="Жужа"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Жужа</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img5-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-6">
+    			<input class="popup-checkbox" type="checkbox" id="img6-popup" />
+    			<label for="img6-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img6-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/keks.jpeg" alt="Кекс"/>
+
+    			<p class="cat-name">Кекс</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/keks.jpeg" alt="Кекс"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Кекс</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img6-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-7">
+    			<input class="popup-checkbox" type="checkbox" id="img7-popup" />
+    			<label for="img7-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img7-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/vasya.jpg" alt="Вася"/>
+
+    			<p class="cat-name">Вася</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/vasya.jpg" alt="Вася"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Вася</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img7-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-8">
+    			<input class="popup-checkbox" type="checkbox" id="img8-popup" />
+    			<label for="img8-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img8-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/zahar.jpg" alt="Захар"/>
+
+    			<p class="cat-name">Захар</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/zahar.jpg" alt="Захар"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Захар</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img8-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-9">
+    			<input class="popup-checkbox" type="checkbox" id="img9-popup" />
+    			<label for="img9-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img9-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/yandex.jpg" alt="Яндекс"/>
+
+    			<p class="cat-name">Яндекс</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/yandex.jpg" alt="Яндекс"/>
+						<section class="cat-description">
+							<p class="cat-name-popup yandex">Яндекс</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img9-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+
+    		<article class="cat-card card-10">
+    			<input class="popup-checkbox" type="checkbox" id="img10-popup" />
+    			<label for="img10-selector">
+    				<span class="fake-selector"></span>
+    			</label>
+    			<label for="img10-popup">
+    				<span class="fake-popup"></span>
+    			</label>
+
+    			<img class="cat-photo" src="img/senya.jpg" alt="Сеня"/>
+
+    			<p class="cat-name">Сеня</p>
+
+    			<div class="black-layer">
+    				<article class="popup-window">
+						<img class="cat-photo-big" src="img/senya.jpg" alt="Сеня"/>
+						<section class="cat-description">
+							<p class="cat-name-popup">Сеня</p>
+							<p>Дружелюбный, ласковый, ручной</p>
+							<p>Возраст ~6 месяцев</p>
+							<p>С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой Бали.</p>
+
+							<label for="img10-popup">
+								<img src="img/close.png" class="icon-close" alt="close"/>    					
+    						</label>		
+						</section>
+    				</article>
+    			</div>
+    		</article>
+    		
+    	</article>
+
+    </main>
+    <footer>
+    	<p>Напишите нам</p>
+    	<p><img class="icon-mail" src="img/email.svg" alt="mail"/><a href="#" class="footer-link">cats@babuli.ru</a></p>
+    	<p>
+    		<img class="icon-mail" src="img/email.svg" alt="mail"/><a href="#" class="footer-link">vnuchek@babuli.ru</a>
+    		<span class="trademark">&copy; 2020 ООО &laquo;<a href="#" class="footer-link-right">Бабушкины котятки</a>&raquo;</span>
+    	</p>
+    </footer>
+  </body>
+</html>

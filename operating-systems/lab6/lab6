@@ -1,0 +1,44 @@
+mkdir c:\lab6
+cd c:\lab6
+
+mem >mem.txt
+ver >ver.txt
+chkdsk >chkdisk.txt
+
+
+for %B in (с:\lab6\*) do (echo %B >>c:\lab6\files_list.txt)
+
+rd /S /Q c:\lab6\test
+del ver.txt mem.txt
+
+
+--------------------------------------
+
+echo %computername%
+
+xcopy /Z c:\lab6\file.txt \\%computername%\c$\tmp\file.txt
+
+schtasks /create /SC MINUTE /TN scheduled /TR copy.bat
+
+fc file.txt \\%computername%\c$\tmp\file.txt
+
+xcopy /Z c:\lab6\file.txt \\%computername%\c$\tmp\file.txt
+
+--------------------------------------
+
+net start dnscache > server.txt
+
+net stop dnscache
+
+net start dnscache > server1.txt
+
+net stop dnscache
+
+fc server.txt server.txt > diff.txt
+
+net start dnscache
+
+---------------------------------------
+
+driverquery /NH /FO TABLE >drivers.txt
+sort /R drivers.txt 

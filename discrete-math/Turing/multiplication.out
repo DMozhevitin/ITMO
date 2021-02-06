@@ -1,0 +1,230 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+
+s 0 -> fstcheck 0 ^
+s 1 -> fstcheck 1 ^
+
+fstcheck 0 -> fstcheck 0 >
+fstcheck 1 -> fstcheck 1 >
+fstcheck * -> cr0 * >
+
+cr0 0 -> cr0 0 >
+cr0 1 -> gobeg3 1 <
+cr0 _ -> cleanall _ <
+
+cleanall 1 -> cleanall _ <
+cleanall 0 -> cleanall _ <
+cleanall * -> cleanall _ <
+cleanall _ -> ac 0 ^ 
+
+gobeg3 1 -> gobeg3 1 <
+gobeg3 0 -> gobeg3 0 <
+gobeg3 * -> gobeg3 * <
+gobeg3 _ -> pgfd _ >
+
+pgfd 0 -> gfd 0 ^
+pgfd 1 -> gfd 1 ^
+
+gfd 1 -> gfd 1 >
+gfd 0 -> gfd 0 >
+gfd * -> gfd * >
+gfd _ -> fdec _ <
+
+fdec 0 -> fdec 1 <
+fdec 1 -> gobeg1 0 <
+fdec * -> tefst * >
+
+tefst 1 -> tefst $ >
+tefst _ -> clrfst _ <
+
+clrfst 1 -> clrfst _ <
+clrfst 0 -> clrfst _ <
+clrfst * -> retfst _ <
+
+retfst 0 -> retfst 0 <
+retfst 1 -> retfst 1 <
+retfst _ -> ac _ >
+
+gobeg1 0 -> gobeg1 0 <
+gobeg1 1 -> gobeg1 1 <
+gobeg1 * -> crz * >
+
+crz 1 -> gobeg2 1 <
+crz 0 -> crz 0 >
+crz _ -> clrfst _ < 
+
+gobeg2 1 -> gobeg2 1 <
+gobeg2 0 -> gobeg2 0 <
+gobeg2 * -> gobeg2 * <
+gobeg2 _ -> todlr _ >
+
+todlr 0 -> dlr 0 <
+todlr 1 -> dlr 1 <
+
+dlr _ -> id $ >
+
+id 1 -> id 1 >
+id 0 -> id 0 >
+id * -> markl * <
+id a -> markl a <
+id b -> markl b <
+id $ -> id $ >
+
+markl 1 -> copy1 b <
+markl 0 -> copy0 a <
+markl $ -> glft $ <
+
+copy1 a -> copy1 a <
+copy1 b -> copy1 b <
+copy1 $ -> copy1 $ <
+copy1 1 -> copy1 1 <
+copy1 0 -> copy1 0 <
+copy1 _ -> id 1 >
+
+copy0 a -> copy0 a <
+copy0 b -> copy0 b <
+copy0 $ -> copy0 $ <
+copy0 1 -> copy0 1 <
+copy0 0 -> copy0 0 <
+copy0 _ -> id 0 >
+
+glft a -> glft a <
+glft b -> glft b <
+glft $ -> glft $ <
+glft 1 -> glft 1 <
+glft 0 -> glft 0 <
+glft _ -> id2 + >
+
+id2 1 -> id2 1 >
+id2 0 -> id2 0 >
+id2 x -> copy2 x <
+id2 y -> copy2 y <
+id2 $ -> copy2 $ <
+id2 + -> id2 + >
+
+copy2 1 -> copy2_1 y <
+copy2 0 -> copy2_0 x <
+copy2 + -> id3 + >
+
+copy2_1 x -> copy2_1 x <
+copy2_1 y -> copy2_1 y <
+copy2_1 $ -> copy2_1 $ <
+copy2_1 1 -> copy2_1 1 <
+copy2_1 0 -> copy2_1 0 <
+copy2_1 + -> copy2_1 + <
+copy2_1 _ -> id2 1 >
+
+copy2_0 x -> copy2_0 x <
+copy2_0 y -> copy2_0 y <
+copy2_0 $ -> copy2_0 $ <
+copy2_0 1 -> copy2_0 1 <
+copy2_0 0 -> copy2_0 0 <
+copy2_0 + -> copy2_0 + <
+copy2_0 _ -> id2 0 >
+
+id3 x -> id3 x >
+id3 y -> id3 y > 
+id3 $ -> toend $ >
+
+toend a -> toend a >
+toend b -> toend b >
+toend * -> toend * >
+toend 1 -> toend 1 >
+toend 0 -> toend 0 >
+toend _ -> decmul _ <
+
+decmul 0 -> decmul 1 <
+decmul 1 -> goadd 0 <
+decmul * -> toendf * >
+
+toendf 1 -> toendf $ >
+toendf _ -> rclr _ <
+rclr 1 -> rclr _ <
+rclr * -> rclr _ <
+rclr a -> rclr _ <
+rclr b -> rclr _ <
+rclr $ -> rclr _ <
+rclr x -> rclr _ <
+rclr y -> rclr _ <
+rclr + -> retfinish _ <
+
+retfinish 1 -> retfinish 1 <
+retfinish 0 -> retfinish 0 <
+retfinish _ -> ac _ >
+
+goadd 0 -> goadd 0 <
+goadd 1 -> goadd 1 <
+goadd * -> goadd * <
+goadd a -> goadd a <
+goadd b -> goadd b <
+goadd $ -> goadd $ <
+goadd y -> goadd y <
+goadd x -> goadd x <
+goadd + -> goadd + <
+goadd _ -> idadd _ >
+
+idadd 1 -> idadd 1 >
+idadd 0 -> idadd 0 >
+idadd + -> id2add + >
+
+id2add y -> id2add y >
+id2add x -> id2add x >
+id2add $ -> decadd $ <
+
+decadd x -> decadd y <
+decadd y -> toplus x <
+decadd + -> tostar + >
+
+toplus y -> toplus y <
+toplus x -> toplus x <
+toplus + -> incadd + <
+
+incadd 0 -> idadd 1 >
+incadd 1 -> incadd 0 <
+incadd _ -> idadd 1 > 
+
+tostar y -> tostar # >
+tostar $ -> tostar $ >
+tostar a -> tostar a >
+tostar b -> tostar b >
+tostar * -> copy3 * <
+tostar p -> copy3 p <
+tostar q -> copy3 q <
+
+copy3 a -> copy3_x p <
+copy3 b -> copy3_y q <
+copy3 $ -> cleanpq $ >
+
+copy3_x a -> copy3_x a <
+copy3_x b -> copy3_x b <
+copy3_x $ -> copy3_x $ <
+copy3_x x -> copy3_x x <
+copy3_x y -> copy3_x y <
+copy3_x # -> tostar2 x >
+
+copy3_y a -> copy3_y a <
+copy3_y b -> copy3_y b <
+copy3_y $ -> copy3_y $ <
+copy3_y x -> copy3_y x <
+copy3_y y -> copy3_y y <
+copy3_y # -> tostar2 y >
+
+tostar2 x -> tostar2 x >
+tostar2 y -> tostar2 y >
+tostar2 $ -> tostar2 $ >
+tostar2 a -> tostar2 a >
+tostar2 b -> tostar2 b >
+tostar2 * -> copy3 * <
+tostar2 p -> copy3 p <
+tostar2 q -> copy3 q <
+
+cleanpq p -> cleanpq a >
+cleanpq q -> cleanpq b >
+cleanpq * -> gomul * <
+
+gomul a -> gomul a <
+gomul b -> gomul b <
+gomul $ -> toend $ > 

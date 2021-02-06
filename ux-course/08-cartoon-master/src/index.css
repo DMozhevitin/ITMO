@@ -1,0 +1,797 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  word-break: break-all;
+}
+
+html {
+  height: 100%;
+
+  font-size: 10px;
+}
+
+body {
+  height: 100%;
+
+  color: #6e6e6e;
+
+  font-size: 1.6rem;
+}
+
+header,
+footer {
+  display: block;
+}
+
+a,
+a:link,
+a:visited {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.center {
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+
+  height: 100%;
+  margin: auto;
+}
+
+.center::before,
+.center::after {
+  position: absolute;
+
+  content: '';
+}
+
+.canvas {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 900px;
+  height: 600px;
+  margin: auto;
+
+  background: linear-gradient(#013971, #000c18 60%);
+}
+
+.moon {
+  animation: moon-go 30s ease infinite;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 60px);
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: #fefce6;
+  box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+  opacity: 1;
+}
+
+@keyframes moon-go {
+  0% {
+    transform: translateY(175px) scale(1.4);
+  }
+  
+  50%, 70% {
+    transform: translateY(-80px) scale(0.8);
+  }
+
+  100% {
+    transform: translateY(175px) scale(1.4);
+  }
+}
+
+.center::after {
+  width: 100%;
+  height: 100%;
+}
+
+.stars {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 875px;
+  margin: 0 auto;
+}
+
+.star-1 {
+  position: absolute;
+  z-index: 1;
+
+  width: 1px;
+  height: 1px;
+  margin-top: 291px;
+  margin-left: 1042px;
+
+  border-radius: 50%;
+
+  animation: twinkle-0 1s linear infinite;
+  animation-delay: 0s;
+
+  background: white;
+
+  opacity: 1;
+}
+
+.bridge {
+  position: absolute;
+  bottom: 10rem;
+  z-index: 1;
+
+  width: 100%;
+  height: 2.6rem;
+
+  border-top: 0.3rem solid white;
+  border-bottom: 0.3rem solid white;
+
+  /* stylelint-disable-next-line */
+  background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%)
+      left/1.6rem 2.2rem,
+    linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem
+      2.2rem;
+}
+
+.train {
+  animation: train-go 20s linear infinite;
+
+  position: absolute;
+  right: 0;
+  bottom: 12.6rem;
+  z-index: 1;
+
+  width: 44rem;
+  height: 10rem;
+}
+
+@keyframes train-go {
+  from {
+    transform: translateX(500px);  
+  }
+
+  to {
+    transform: translateX(-1500px);
+  }
+}
+
+.engine-front,
+.engine-front::before,
+.engine-front::after {
+  border: 0.1rem solid rgba(255, 255, 255, 0.15);
+  border-right: none;
+  border-radius: 50% 0 0 50%;
+
+  background: linear-gradient(0deg, #0f0f0f, #262626, #0f0f0f);
+}
+
+.engine-front {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 0;
+
+  width: 8rem;
+  height: 4.6rem;
+
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.engine-front::before,
+.engine-front::after {
+  position: absolute;
+  top: 50%;
+  left: -0.9rem;
+
+  width: 0.8rem;
+  height: 70%;
+
+  transform: translate(0, -50%);
+
+  content: '';
+}
+
+.engine-front::after {
+  left: -1.4rem;
+
+  width: 0.5rem;
+  height: 40%;
+}
+
+.chimney {
+  position: absolute;
+  top: -2.3rem;
+  left: 2.5rem;
+
+  width: 1.7rem;
+  height: 2.2rem;
+
+  background: #900;
+}
+
+.chimney::before,
+.chimney::after {
+  position: absolute;
+
+  content: '';
+}
+
+.chimney::before {
+  top: -0.9rem;
+  left: 50%;
+
+  width: 160%;
+
+  border-top: 0.8rem solid orange;
+  border-right: 0.5rem solid transparent;
+  border-bottom: none;
+  border-left: 0.5rem solid transparent;
+
+  transform: translate(-50%, 0);
+}
+
+.smoke {
+  position: absolute;
+  top: -1.5rem;
+  left: 0.2rem;
+  z-index: -1;
+
+  width: 0.8rem;
+  height: 1.4rem;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.8);
+  animation: smoke-go 5s linear infinite;
+}
+
+.smoke-1 {
+  left: 0.2rem;
+
+  animation: move-smoke-1 10s ease infinite;
+}
+
+.smoke-2 {
+  left: 0.4rem;
+
+  animation: move-smoke-2 7s ease infinite;
+}
+
+.smoke-3 {
+  left: 0.6rem;
+  
+  animation: move-smoke-3 5s ease infinite;
+}
+
+.smoke-4 {
+  left: 0.8rem;
+  animation: move-smoke-4 4s ease infinite;
+}
+
+@keyframes move-smoke-1 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(45px, -45px);
+  }
+}
+
+@keyframes move-smoke-2 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(45px, -45px);
+  }
+}
+
+@keyframes move-smoke-3 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(45px, -45px);
+  }
+}
+
+@keyframes move-smoke-4 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(45px, -45px);
+  }
+}
+
+.engine-body {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 8rem;
+
+  width: 5rem;
+  height: 7rem;
+
+  border-radius: 0 0 0.4rem;
+
+  background: linear-gradient(0deg, #300, red, #900);
+}
+
+.engine-body::before,
+.engine-body::after {
+  position: absolute;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+
+  content: '';
+}
+
+.engine-body::before {
+  top: -1.2rem;
+
+  width: 130%;
+  height: 1.2rem;
+
+  border-radius: 50% 50% 0 0;
+
+  background: linear-gradient(0deg, #600, #900, #600);
+}
+
+.engine-body::after {
+  top: 1rem;
+
+  width: 45%;
+  height: 40%;
+
+  border-radius: 0.2rem;
+
+  background: #b3e0f2;
+}
+
+.wheel-holder {
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 2.8rem;
+}
+
+.wheel {
+  animation: wheel-rotate 5s linear infinite;
+  position: absolute;
+  left: 1rem;
+
+  width: 2.8rem;
+  height: 2.8rem;
+
+  border: 0.3rem solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+
+  background: orange;
+}
+
+@keyframes wheel-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.wheel-2 {
+  left: 4.5rem;
+}
+
+.wheel-3 {
+  top: -1.1rem;
+  left: 8.7rem;
+
+  width: 3.8rem;
+  height: 3.8rem;
+
+  border-width: 0.5rem;
+}
+
+.wheel-4 {
+  left: 15.7rem;
+}
+
+.wheel-5 {
+  left: 19.5rem;
+}
+
+.wheel-6 {
+  left: 25.7rem;
+}
+
+.wheel-7 {
+  left: 29.5rem;
+}
+
+.wheel-8 {
+  left: 35.7rem;
+}
+
+.wheel-9 {
+  left: 39.5rem;
+}
+
+.wheel::before,
+.wheel::after {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  content: '';
+}
+
+.wheel::before {
+  width: 0.2rem;
+  height: 86%;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.wheel::after {
+  width: 40%;
+  height: 40%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle at center, #b37400 30%, #996300 30%);
+}
+
+.compartment {
+  animation: compartment-go 10s linear infinite;
+  position: absolute;
+  bottom: 1.4rem;
+  left: 15rem;
+
+  width: 8rem;
+  height: 5rem;
+
+  border-radius: 0 0 0.3rem 0.3rem;
+
+  background: linear-gradient(#104b63 50%, #1f8dba);
+}
+
+@keyframes compartment-go {
+  0% {
+    transform: skewY(-15deg);
+  }
+  
+  50%, 70% {
+    transform: skewY(0deg);
+  }
+
+  100% {
+    transform: skewY(15deg);
+  }
+}
+
+.compartment-two {
+  left: 25rem;
+}
+
+.compartment-three {
+  left: 35rem;
+}
+
+.compartment::before,
+.compartment::after {
+  position: absolute;
+  bottom: 0.4rem;
+
+  width: 0.9rem;
+  height: 0.8rem;
+
+  border: 0.4rem solid transparent;
+
+  background: black;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  content: '';
+}
+
+.compartment::before {
+  left: -0.9rem;
+
+  border-left: 0.4rem solid rgba(255, 255, 255, 0.3);
+}
+
+.compartment::after {
+  left: -2rem;
+
+  border-right: 0.4rem solid rgba(255, 255, 255, 0.3);
+}
+
+.compartment-window {
+  position: absolute;
+  top: 0.7rem;
+
+  width: 100%;
+  height: 40%;
+
+  background-image: linear-gradient(90deg, transparent 0.8rem, skyblue 0.8rem);
+  background-position: left;
+  background-size: 2.4rem 100%;
+}
+
+.compartment-window::before,
+.compartment-window::after {
+  position: absolute;
+
+  content: '';
+}
+
+.compartment-window::before {
+  top: -1.4rem;
+  left: 50%;
+
+  width: 110%;
+  height: 0.6rem;
+
+  border-radius: 50% 50% 0 0;
+
+  transform: translate(-50%, 0);
+
+  background: #104b63;
+}
+
+.wheel-joint {
+  animation: wheel-joint-rotate 5s linear infinite;
+
+  position: absolute;
+  top: calc(50% - 0.2rem);
+  right: 0.4rem;
+  z-index: 1;
+
+  width: 3.6rem;
+  height: 0.4rem;
+
+  border-radius: 0.6rem;
+
+  transform-origin: 100% 50%;
+
+  background: white;
+}
+
+@keyframes wheel-joint-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.wheel-joint::before,
+.wheel-joint::after {
+  position: absolute;
+  top: 50%;
+
+  width: 0.8rem;
+  height: 0.8rem;
+
+  border: 0.1rem solid white;
+  border-radius: 50%;
+
+  transform: translate(0, -50%);
+
+  background: #333;
+
+  content: '';
+}
+
+.wheel-joint::before {
+  left: -0.4rem;
+}
+
+.wheel-joint::after {
+  right: -0.4rem;
+}
+
+.wheel-joint-2 {
+  right: auto;
+  left: 1.8rem;
+
+  width: 4.4rem;
+
+  transform: rotate(-15deg);
+  transform-origin: 0 50%;
+}
+
+.wheel-joint-2::before {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.h-con {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 420px;
+}
+
+.hill {
+  position: absolute;
+  z-index: 130;
+
+  width: 700px;
+  height: 1000px;
+  margin-top: 140px;
+  margin-left: -100px;
+
+  border-radius: 30px;
+
+  transform: rotate(45deg);
+
+  background: linear-gradient(to bottom right, #002142, #27435f);
+  box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hill2 {
+  position: absolute;
+  z-index: 130;
+
+  width: 800px;
+  height: 1000px;
+  margin-top: 140px;
+  margin-left: 0;
+
+  border-radius: 30px;
+
+  transform: rotate(45deg);
+
+  background: linear-gradient(to top right, #002142, #27435f);
+  box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hill3 {
+  position: absolute;
+  z-index: 130;
+
+  width: 600px;
+  height: 1000px;
+  margin-top: 140px;
+  margin-left: 150px;
+
+  border-radius: 30px;
+
+  transform: rotate(45deg);
+
+  background: linear-gradient(to bottom right, #002142, #27435f);
+  box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cloud-1 {
+  animation: cloud-go-1 12s linear infinite;
+}
+
+.cloud-2 {
+  animation: cloud-go-reverse-1 16s linear infinite;
+}
+
+.cloud-3 {
+  animation: cloud-go-2 12s linear infinite;
+}
+
+.cloud-4 {
+  animation: cloud-go-reverse-2 16s linear infinite;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 200px;
+  height: 60px;
+
+  border-radius: 200px;
+
+  background: #fff;
+
+  opacity: 0.8;
+}
+
+
+@keyframes cloud-go-reverse-1 {
+  from {
+    transform: translate(0px, 75px) scale(-1, 1);
+  }
+
+  to {
+    transform: translate(1000px, 75px) scale(-1, 1);
+  }
+}
+
+@keyframes cloud-go-reverse-2 {
+  from {
+    transform: translate(200px, 200px) scale(-1, 1);
+  }
+
+  to {
+    transform: translate(1000px, 200px) scale(-1, 1);
+  }
+}
+
+@keyframes cloud-go-1 {
+  from {
+    transform: translate(0px, 300px);
+  }
+
+  to {
+    transform: translate(1000px, 300px);
+  }
+}
+
+@keyframes cloud-go-2 {
+  from {
+    transform: translate(100px, 125px);
+  }
+
+  to {
+    transform: translate(1000px, 125px);
+  }
+}
+
+.cloud:before,
+.cloud:after {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+
+  width: 100px;
+  height: 80px;
+
+  border-radius: 100px;
+
+  background: #fff;
+
+  content: '';
+}
+
+.cloud:after {
+  top: -55px;
+  right: 15px;
+  left: auto;
+
+  width: 120px;
+  height: 120px;
+}

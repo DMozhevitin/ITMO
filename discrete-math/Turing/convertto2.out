@@ -1,0 +1,42 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s 0 -> lft_1 0 <
+s 1 -> lft_1 1 <
+s 2 -> lft_1 2 <
+
+lft_1 _ -> lft_2 $ <
+lft_1 $ -> id $ >
+
+lft_2 _ -> lft_1 0 > 
+
+id $ -> id $ >
+id 0 -> id 0 >
+id 1 -> id 1 >
+id 2 -> id 2 >
+id _ -> dec _ <
+
+dec 0 -> dec 2 <
+dec 2 -> back 1 <
+dec 1 -> back 0 <
+dec $ -> toend $ >
+
+back 1 -> back 1 <
+back 0 -> back 0 <
+back 2 -> back 2 <
+back $ -> inc $ <
+
+inc 0 -> id 1 >
+inc 1 -> inc 0 <
+inc _ -> id 1 > 
+
+toend 2 -> toend 2 >
+toend _ -> clr _ <
+clr 2 -> clr _ <
+clr $ -> tobegin _ <
+
+tobegin 1 -> tobegin 1 <
+tobegin 0 -> tobegin 0 <
+tobegin _ -> ac _ >

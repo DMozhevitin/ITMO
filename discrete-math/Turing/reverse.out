@@ -1,0 +1,39 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s 0 -> id 0 ^
+s 1 -> id 1 ^
+
+id 0 -> id 0 > 
+id 1 -> id 1 >
+id _ -> back _ <
+
+back 1 -> carry1 $ >
+back 0 -> carry0 $ >
+back $ -> back $ <
+
+carry0 1 -> carry0 1 >
+carry0 0 -> carry0 0 >
+carry0 $ -> carry0 $ >
+carry0 _ -> back2 0 <
+
+carry1 1 -> carry1 1 >
+carry1 0 -> carry1 0 >
+carry1 $ -> carry1 $ > 
+carry1 _ -> back2 1 < 
+
+back2 $ -> back3 $ <
+back2 0 -> back2 0 <
+back2 1 -> back2 1 <
+
+back3 $ -> back3 $ <
+back3 0 -> back 0 ^
+back3 1 -> back 1 ^
+back3 _ -> back4 _ >
+
+back4 $ -> back4 _ >
+back4 0 -> ac 0 ^
+back4 1 -> ac 1 ^
+

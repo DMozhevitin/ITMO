@@ -1,0 +1,17 @@
+<img src="data:image/png;base64,IMG_DATA"/>
+
+<div class="captcha-number-form">
+    <form action="FORM_URL" method="get" id="url-form">
+        <label for="captcha-number-form__number">Enter number on picture:</label>
+        <input name="number" id="captcha-number-form__number">
+    </form>
+</div>
+
+<img src="img/police.png"/>
+
+<script>
+    $(".captcha-number-form form").submit(function () {
+        $.get("FORM_URL.html?number=" + $(".captcha-number-form form input").val(), {}, function () {
+        }, "json");
+    });
+</script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-pig-tinder</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+      <header>
+        <img class="header-logo" src="img/tinder.svg" alt="logo"/>
+      </header>
+
+      <main>
+
+        <img class="img-badge like-badge" src="img/like.png" alt="like-badge" id="like-badge"/>
+        <img class="img-badge dislike-badge" src="img/dislike.png" alt="dislike-badge" id="dislike-badge"/>
+        <img class="img-badge superlike-badge" src="img/superlike.png" alt="superlike-badge" id="superlike-badge"/>
+
+        <article class="card card-0" id="card-0">
+            <section class="card-desc">
+              <p class="card-name">Лиза</p>
+              <p class="card-age">10 месяцев</p>
+            </section>
+        </article>
+
+
+        <article class="card card-1" id="card-1">
+          <section class="card-desc">
+            <p class="card-name">Катя</p>
+            <p class="card-age">6 месяцев</p>
+          </section>
+        </article>
+
+        <article class="card card-2" id="card-2">
+          <section class="card-desc">
+            <p class="card-name">Оля</p>
+            <p class="card-age">11 месяцев</p>
+          </section>
+        </article>
+
+        <article class="card card-3" id="card-3">
+          <section class="card-desc">
+            <p class="card-name">Маша</p>
+            <p class="card-age">4 месяца</p>
+          </section>
+        </article>
+
+        <article class="card card-4" id="card-4">
+          <section class="card-desc">
+            <p class="card-name">Аня</p>
+            <p class="card-age">8 месяцев</p>
+          </section>
+        </article>
+
+        <article class="card card-5" id="card-5">
+          <section class="card-desc">
+            <p class="card-name">Антонина</p>
+            <p class="card-age">7 месяцев</p>
+          </section>
+        </article>
+
+        <article class="card card-6" id="card-6">
+          <section class="card-desc">
+            <p class="card-name">Анжела</p>
+            <p class="card-age">9 месяцев</p>
+          </section>
+        </article>
+
+      </main>
+
+      <article class="action-icons">
+
+        <button class="icon-button" onclick="dislike()">
+          <img class="action-icon cross-icon" src="img/cancel.svg" alt="dislike"/>
+        </button>
+
+        <button class="icon-button" onclick="superlike()">
+          <img class="action-icon" src="img/star.svg" alt="superlike"/>
+        </button>
+
+        <button class="icon-button" onclick="like()">
+          <img class="action-icon" src="img/icons8-heart-outline.svg" alt="like"/>
+        </button>
+      </article>
+
+      <script src="index.js"></script>
+  </body>
+</html>

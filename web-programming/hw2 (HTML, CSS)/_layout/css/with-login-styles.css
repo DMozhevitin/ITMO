@@ -1,0 +1,293 @@
+:root {
+    --border-color: rgb(185, 185, 185);
+    --border-radius: 6px;
+    --black-color: #333;
+    --caption-color: #3B5998;
+    color: var(--black-color);
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+html {
+    padding: 1rem;
+    min-width: 600px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+header {
+    position: relative;
+}
+
+header .languages {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .enter-or-register-box {
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+
+header nav {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 0.25rem;
+    margin-top: 1rem;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-family: "Arial Narrow", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.middle {
+    margin-top: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+aside {
+    position: relative;
+    bottom: 3rem;
+    width: 20rem;
+    min-width: 20rem;
+    float: right;
+    margin-left: 10rem;
+    height: 10rem;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+aside section {
+    border: 1px solid var(--border-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+aside section .header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--caption-color);
+}
+
+aside section .header:before {
+    content: "→";
+}
+
+aside section .body {
+    padding: 1rem;
+}
+
+aside section .footer {
+    border-top: 1px solid var(--border-color);
+    overflow: auto;
+    padding: 0.25rem;
+}
+
+aside section .footer a {
+    float: right;
+    font-size: 0.75rem;
+}
+
+aside section .footer a:after {
+    content: " →";
+}
+
+.datatable {
+    border: 1px solid lightgrey;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+}
+
+.caption {
+    background-color: lightgrey;
+}
+
+td, th {
+    border: 1px solid lightgrey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+th:nth-child(2) {
+    width: 30rem;
+}
+
+th {
+    text-align: center;
+    width: 10rem;
+    padding: 1px;
+}
+
+main {
+    position: center;
+}
+
+body {
+    position: relative;
+}
+
+
+tr {
+    padding: 1px;
+    text-align: center;
+}
+
+.middle {
+    position: relative;
+    align-items: center;
+}
+
+main .login-form-box {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: 29rem;
+    height: 16rem;
+    position: relative;
+}
+
+main .login-form-box .body {
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+}
+
+main .login-form-box .header span {
+    padding-left: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #3B5998;
+    font-family: verdana, arial, sans-serif;
+}
+
+main .login-form-box .header {
+    padding-bottom: 2px;
+    border-bottom: 2px solid lightgrey;
+}
+
+main .login-form-box .field {
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+}
+
+main .login-form-box .field .value {
+    display: inline-block;
+    left: 9.2rem;
+    position: absolute;
+}
+
+main .login-form-box .field .name {
+    display: inline-block;
+    font-family: verdana, arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+main .login-form-box .field .value input {
+    width: 16rem;
+}
+
+main .login-form-box .field .error {
+    left: 9.2rem;
+    position: absolute;
+    margin-top: 5px;
+    color: red;
+    font-family: verdana, arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+main .login-form-box .checkbox-field {
+    position: absolute;
+    left: 9.2rem;
+    bottom: 6rem;
+    font-family: verdana, arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+main .login-form-box .button-field {
+    position: absolute;
+    left: 9.2rem;
+    bottom: 3rem;
+}
+
+main .login-form-box .button-field input {
+    width: 80px;
+    height: 23px;
+}
+
+main .login-form-box .links {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 2rem;
+}
+
+main .login-form-box .field .name label[for="password"] {
+    position: relative;
+    left: 1.7rem;
+}
+
+main .login-form-box .links a {
+    font-size: 0.9rem;
+    font-family: verdana, arial, sans-serif;
+}
+
+main .footer {
+    position: absolute;
+    bottom: 0.2rem;
+    border-top: 2px solid lightgrey;
+    width: 29rem;
+}
+
+main .footer .footer-links {
+    position: relative;
+    left: 12.6rem;
+    margin-right: 8px;
+}
+
+main .footer .footer-links a {
+    font-size: 0.8rem;
+    font-family: verdana, arial, sans-serif;
+    margin-right: 5px;
+}
+

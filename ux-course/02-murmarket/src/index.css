@@ -1,0 +1,454 @@
+/*selector by element bcs there is only one body*/
+body {
+	font-family: arial;
+}
+
+.cat-card {
+	position: relative;
+	display: inline-block;
+	transition: left 0.5s;
+	opacity: 0.7;
+	height: 200px;
+	text-align: center;
+}
+
+.cat-name {
+	font-size: 22px;
+	z-index: 2;
+	position: absolute;
+	top: 35%;
+	left: 42.5%;
+	color: white;
+	display: none;
+}
+
+.cat-photo {
+	display: inline-block;
+	width: 300px;
+	height: 100%;
+
+	object-fit: cover;
+	object-position: center;
+}
+
+.cat-photo-big {
+	float: left;
+	width: 500px;
+	height: 366px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.cat-description {
+	text-align: left;
+	width: 400px;
+	height: 100%;
+	display: inline-block;
+	color: white;
+}
+
+.cat-name-popup {
+	font-size: 34px;	
+}
+
+.carousel {
+	white-space: nowrap;
+	overflow: hidden;
+
+	margin-top: 15%;
+}
+
+.yandex:first-letter {
+	color: red;
+}
+
+/*selector by element bcs there is only one main*/
+main {
+	margin-top: 50px;
+	margin-bottom: 120px;
+}
+
+.fake-selector {
+	position: absolute;
+	width: 300px;
+	height: 250px;	
+}
+
+.fake-popup {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	display: none;
+	z-index: 2001;
+}
+
+/*selector by element bcs there is only one header*/
+header {
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.99;
+	height: 50px;	
+	text-align: center;
+
+	border-bottom: 2px solid #d3d3d3;
+	border-top: 2px solid #d3d3d3;	
+}
+
+.header-text {
+	margin: 0;
+	margin-top: 5px;
+	font-size: 32px;
+	font-family: "PT SansNarrow";
+}
+
+/*selector by element bcs there is only one footer*/
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 120px;
+	background: white;
+	border-bottom: 2px solid #d3d3d3;
+	border-top: 2px solid #d3d3d3;
+
+	font-family: arial;
+	font-size: 14px; 
+}
+
+.icon-mail {
+	width: 15px;
+	height: 15px;
+}
+
+.footer-link {
+	margin-left: 5px;
+}
+
+.footer-link, .footer-link-right {
+	color: #4c4cd8;
+}
+
+.trademark {
+	position: absolute;
+	right: 25px;
+}
+
+.img-selector, .popup-checkbox, .close-popup {
+	display: none;
+	opacity: 1;
+}
+
+.popup-window {
+	position: relative;
+	z-index: 5;
+	opacity: 1;
+	width: 100%;
+	height: 500px;
+	white-space: normal;
+}
+
+.popup-window .cat-name-popup {
+	margin-top: 0;
+}
+
+.icon-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30px;
+	height: 30px;
+}
+
+.black-layer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: none;
+	z-index: 3;
+
+	padding: 15%;
+}
+
+/* scroll */
+
+.img1-selector:checked ~ .cat-card {
+	left: 600px;
+}
+
+.img2-selector:checked ~ .cat-card {
+	left: 300px; 
+}
+
+.img3-selector:checked ~ .cat-card {
+	left: 0; 
+}
+
+.img4-selector:checked ~ .cat-card {
+	left: -300px; 
+}
+
+.img5-selector:checked ~ .cat-card {
+	left: -600px; 
+}
+
+.img6-selector:checked ~ .cat-card {
+	left: -900px; 
+}
+
+.img7-selector:checked ~ .cat-card {
+	left: -1200px; 
+}
+
+.img8-selector:checked ~ .cat-card {
+	left: -1500px; 
+}
+
+.img9-selector:checked ~ .cat-card {
+	left: -1800px; 
+}
+
+.img10-selector:checked ~ .cat-card {
+	left: -2100px; 
+}
+
+/* size */
+
+.img1-selector:checked ~ .card-1 {
+	height: 250px;
+	opacity: 1;
+}
+
+.img2-selector:checked ~ .card-2 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img3-selector:checked ~ .card-3 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img4-selector:checked ~ .card-4 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img5-selector:checked ~ .card-5 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img6-selector:checked ~ .card-6 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img7-selector:checked ~ .card-7 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img8-selector:checked ~ .card-8 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img9-selector:checked ~ .card-9 {
+	height: 250px;
+	opacity: 1; 
+}
+
+.img10-selector:checked ~ .card-10 {
+	height: 250px;
+	opacity: 1; 
+}
+
+/* hover */
+
+.img1-selector:checked ~ .card-1:hover {
+	background: black;
+}
+
+.img1-selector:checked ~ .card-1:hover .cat-photo {
+	opacity: 0.5;
+}
+
+
+.img2-selector:checked ~ .card-2:hover {
+	background: black;
+}
+
+.img2-selector:checked ~ .card-2:hover .cat-photo {
+	opacity: 0.5;
+}
+
+
+.img3-selector:checked ~ .card-3:hover {
+	background: black;
+}
+
+.img3-selector:checked ~ .card-3:hover .cat-photo {
+	opacity: 0.5;
+}
+
+.img4-selector:checked ~ .card-4:hover {
+	background: black;
+}
+
+.img4-selector:checked ~ .card-4:hover .cat-photo {
+	opacity: 0.5;
+}
+
+.img5-selector:checked ~ .card-5:hover {
+	background: black;
+}
+
+.img5-selector:checked ~ .card-5:hover .cat-photo {
+	opacity: 0.5;
+}
+
+.img6-selector:checked ~ .card-6:hover {
+	background: black;
+}
+
+.img6-selector:checked ~ .card-6:hover .cat-photo {
+	opacity: 0.5;
+}
+
+.img7-selector:checked ~ .card-7:hover {
+	background: black;
+}
+
+.img7-selector:checked ~ .card-7:hover .cat-photo {
+	opacity: 0.5;
+}
+
+
+.img8-selector:checked ~ .card-8:hover {
+	background: black;
+}
+
+.img8-selector:checked ~ .card-8:hover .cat-photo {
+	opacity: 0.5;
+}
+
+
+.img9-selector:checked ~ .card-9:hover {
+	background: black;
+}
+
+.img9-selector:checked ~ .card-9:hover .cat-photo {
+	opacity: 0.5;
+}
+
+
+.img10-selector:checked ~ .card-10:hover {
+	background: black;
+}
+
+.img10-selector:checked ~ .card-10:hover .cat-photo {
+	opacity: 0.5;
+}
+
+/* name */
+
+.img1-selector:checked ~ .card-1:hover .cat-name {
+	display: block;
+}
+
+.img2-selector:checked ~ .card-2:hover .cat-name {
+	display: block;
+}
+
+.img3-selector:checked ~ .card-3:hover .cat-name {
+	display: block;
+}
+
+.img4-selector:checked ~ .card-4:hover .cat-name {
+	display: block;
+}
+
+.img5-selector:checked ~ .card-5:hover .cat-name {
+	display: block;
+}
+
+.img6-selector:checked ~ .card-6:hover .cat-name {
+	display: block;
+}
+
+.img7-selector:checked ~ .card-7:hover .cat-name {
+	display: block;
+}
+
+.img8-selector:checked ~ .card-8:hover .cat-name {
+	display: block;
+}
+
+.img9-selector:checked ~ .card-9:hover .cat-name {
+	display: block;
+}
+
+.img10-selector:checked ~ .card-10:hover .cat-name {
+	display: block;
+}
+
+/* popup */
+
+.img1-selector:checked ~ .card-1 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img2-selector:checked ~ .card-2 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img3-selector:checked ~ .card-3 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img4-selector:checked ~ .card-4 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img5-selector:checked ~ .card-5 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img6-selector:checked ~ .card-6 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img7-selector:checked ~ .card-7 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img8-selector:checked ~ .card-8 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img9-selector:checked ~ .card-9 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.img10-selector:checked ~ .card-10 .fake-popup {
+	display: block;
+	top: 0;
+}
+
+.popup-checkbox:checked ~ .black-layer {
+	display: block;
+}

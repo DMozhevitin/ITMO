@@ -1,0 +1,30 @@
+.datatable {
+    border: 1px solid lightgrey;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: absolute;
+}
+
+.caption {
+    background-color: lightgrey;
+}
+
+td, th {
+    border: 1px solid lightgrey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+th:nth-child(2) {
+    width: 40%;
+}
+
+th:nth-last-child(1), th:nth-child(3), thead th:nth-child(5) {
+    width: 15%
+}

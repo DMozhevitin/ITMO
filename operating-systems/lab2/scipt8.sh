@@ -1,0 +1,1 @@
+find $HOME | grep -v "links" > text.txt 

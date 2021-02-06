@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - u55@wp.codeforces.com" uuid="3096df7f-7184-4453-8049-a90cb4bf5e48">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>u55</user-name>
+    </data-source>
+  </component>
+</project>

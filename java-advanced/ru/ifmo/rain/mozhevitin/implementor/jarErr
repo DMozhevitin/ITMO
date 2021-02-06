@@ -1,0 +1,8 @@
+..\..\..\..\..\module-info.java:2: error: module not found: info.kgeorgiy.java.advanced.implementor
+    requires info.kgeorgiy.java.advanced.implementor;
+                                        ^
+..\..\..\..\..\module-info.java:3: error: module not found: info.kgeorgiy.java.advanced.concurrent
+    requires info.kgeorgiy.java.advanced.concurrent;
+                                        ^
+2 errors
+build-jar.sh: line 14: cd: _build: No such file or directory

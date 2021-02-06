@@ -1,0 +1,19 @@
+hw4> benchmarks
+Running 1 benchmarks...
+Benchmark hw4-benchmark: RUNNING...
+benchmarking Monte Carlo benchmark/sequential Monte Carlo method on 10^6 iterations
+time                 5.760 s    (4.910 s .. 6.671 s)
+                     0.997 R²   (0.989 R² .. 1.000 R²)
+mean                 5.654 s    (5.531 s .. 5.813 s)
+std dev              166.8 ms   (49.78 ms .. 226.7 ms)
+variance introduced by outliers: 19% (moderately inflated)
+
+benchmarking Monte Carlo benchmark/parallel Monte Carlo method on 10^6 iterations
+time                 2.703 s    (2.630 s .. 2.783 s)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.762 s    (2.731 s .. 2.820 s)
+std dev              56.77 ms   (413.0 μs .. 70.59 ms)
+variance introduced by outliers: 19% (moderately inflated)
+
+Benchmark hw4-benchmark: FINISH
+Completed 2 action(s).

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>09-cat-instagram</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <main>
+    <input type="radio" name="filter" id="blur-filter-input" class="filter-input blur-filter-input">
+    <input type="radio" name="filter" id="no-filter-input" class="filter-input no-filter-input" checked>
+    <input type="radio" name="filter" id="bw-filter-input" class="filter-input bw-filter-input">
+    <input type="radio" name="filter" id="sepia-filter-input" class="filter-input sepia-filter-input">
+    <input type="radio" name="filter" id="blue-filter-input" class="filter-input blue-filter-input">
+    <input type="radio" name="filter" id="negative-filter-input" class="filter-input negative-filter-input">
+
+    <input type="checkbox" id="fit" class="action-input action-fit" />
+
+    <input type="radio" name="action-rotate" id="rotate-90deg" class="action-input actinon-rotate90deg" />
+    <input type="radio" name="action-rotate" id="rotate-180deg" class="action-input actinon-rotate180deg" />
+    <input type="radio" name="action-rotate" id="rotate-270deg" class="action-input actinon-rotate270deg" />
+    <input type="radio" name="action-rotate" id="rotate-360deg" class="action-input actinon-rotate360deg" />
+
+    <input type="checkbox" id="flip" class="action-input action-flip" />
+
+    <input type="radio" name="scale" id="scale-1" class="action-input  action-scale scale-1" checked />
+    <input type="radio" name="scale" id="scale-075" class="action-input  action-scale scale-075" />
+    <input type="radio" name="scale" id="scale-05" class="action-input  action-scale scale-05" />
+
+    <input type="checkbox" id="logo-input" class="action-input logo-input" />
+
+    <input type="radio" name="arrow" id="arrow-left-input" class="arrow-input arrow-left-input" />
+    <input type="radio" name="arrow" id="arrow-right-input" class="arrow-input arrow-right-input" />
+
+    <section class="sprite">
+      <label for="fit">
+        <img class="sprite-icon" src="icons/fill.svg" alt="fill icon" />
+      </label>
+
+      <label class="scale1-label" for="scale-1">
+        <img class="sprite-icon" src="icons/scale.svg" alt="scale-icon" />
+      </label>
+
+      <label class="scale075-label" for="scale-075">
+        <img class="sprite-icon" src="icons/scale.svg" alt="scale-icon" />
+      </label>
+
+      <label class="scale05-label" for="scale-05">
+        <img class="sprite-icon" src="icons/scale.svg" alt="scale-icon" />
+      </label>
+
+      <label for="logo-input">
+        <img class="sprite-icon" src="icons/logo.svg" alt="logo" />
+      </label>
+
+
+      <label class="rotate90-label" for="rotate-90deg">
+        <img class="sprite-icon" src="icons/rotate.svg" alt="rotate-icon" />
+      </label>
+
+      <label class="rotate180-label" for="rotate-180deg">
+        <img class="sprite-icon" src="icons/rotate.svg" alt="rotate-icon" />
+      </label>
+
+      <label class="rotate270-label" for="rotate-270deg">
+        <img class="sprite-icon" src="icons/rotate.svg" alt="rotate-icon" />
+      </label>
+
+      <label class="rotate360-label" for="rotate-360deg">
+        <img class="sprite-icon" src="icons/rotate.svg" alt="rotate-icon" />
+      </label>
+
+      <label for="flip">
+        <img class="sprite-icon" src="icons/flip.svg" alt="flip icon" />
+      </label>
+
+    </section>
+
+    <div class="rotate-wrapper">
+      <div class="flip-wrapper">
+        <div class="scale-wrapper">
+          <div class="photo-wrapper">
+            <img class="cat-photo" src="img/persik.jpg" alt="cat's photo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img class="cat-photo-clear" src="img/persik.jpg" alt="cat's photo" />
+
+
+
+    <section class="filters">
+      <label class="arrow-left-label arrow-label" for="arrow-left-input">
+        <img class="arrow-icon arrow-left" src="icons/arrow-left.svg" alt="left arrow" />
+      </label>
+
+      <section class="filter no-filter">
+        <p class="filter-desc no-filter-desc">No Filter</p>
+        <label for="no-filter-input">
+          <img src="img/persik.jpg" class="filter-photo photo-no-filter" alt="no-filter" />
+        </label>
+      </section>
+
+      <section class="filter blur-filter">
+        <p class="filter-desc blur-filter-desc">Blur</p>
+        <label for="blur-filter-input">
+          <img src="img/persik.jpg" class="filter-photo photo-blur-filter" alt="blur-filter" />
+        </label>
+      </section>
+
+      <section class="filter bw-filter">
+        <p class="filter-desc bw-filter-desc">Black n White</p>
+        <label for="bw-filter-input">
+          <img src="img/persik.jpg" class="filter-photo photo-bw-filter" alt="black-n-white-filter" />
+        </label>
+      </section>
+
+      <section class="filter sepia-filter">
+        <p class="filter-desc no-sepia-desc">Sepia</p>
+        <label for="sepia-filter-input">
+          <img src="img/persik.jpg" class="filter-photo photo-sepia-filter" alt="sepia-filter" />
+        </label>
+      </section>
+
+      <section class="filter blue-filter">
+        <p class="filter-desc blue-filter-desc">Blue</p>
+        <label for="blue-filter-input">
+          <img src="img/persik.jpg" class="filter-photo photo-blue-filter" alt="blue-filter" />
+        </label>
+      </section>
+
+      <section class="filter negative-filter">
+        <p class="filter-desc negative-filter-desc">Negative</p>
+        <label for="negative-filter-input">
+          <img src="img/persik.jpg" class="filter-photo photo-negative-filter" alt="negative-filter" />
+        </label>
+      </section>
+
+      <label class="arrow-right-label arrow-label" for="arrow-right-input">
+        <img class="arrow-icon arrow-right" src="icons/arrow-left.svg" alt="right arrow" />
+      </label>
+
+
+    </section>
+  </main>
+</body>
+
+</html>

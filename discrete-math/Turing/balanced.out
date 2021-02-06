@@ -1,0 +1,23 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s _ -> ac _ ^
+s ) -> rj ) ^
+s ( -> fwd ( ^
+fwd ( -> fwd ( >
+fwd ) -> back $ <
+fwd $ -> fwd $ >
+fwd _ -> back2 _ <
+back ) -> back ) <
+back _ -> fwd2 _ >
+back ( -> fwd $ >
+back $ -> back $ <
+back2 ( -> fwd2 _ <
+back2 $ -> back2 _ <
+back2 _ -> ac _ ^
+fwd2 ( -> fwd2 _ >
+fwd2 $ -> fwd2 _ >
+fwd2 _ -> rj _ ^
+

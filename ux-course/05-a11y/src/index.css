@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  background: url(img/background.jpg) no-repeat center center;
+  background-size: 105%;
+  height: 100vh;
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: #FFFFFF;
+  margin: auto;
+  width: 40vw;
+  border-radius: 8px;
+  padding-left: 8px;
+}
+
+
+.form__title {
+  font-size: 32px;
+  color: #4986CC;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 24px;
+}
+
+.form__subtitle {
+  color: #828282;
+}
+
+.mobile-dev-input,
+.web-dev-input,
+.backend-dev-input {
+  display: none;
+}
+
+.form__input-radio-field__subtitle {
+  font-size: 24px;
+  margin: auto;
+}
+
+.form__input-radio-field {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 60%;
+}
+
+.form__input-radio-field__label {
+  display: flex;
+  flex-grow: 1;
+  border: 1px solid #99A2AD;
+  cursor: pointer;
+}
+
+.form__input-radio-field__label span {
+  margin: auto;
+}
+
+.mobile-dev-label {
+  margin-left: 24px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: none;
+}
+
+.backend-dev-label {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+}
+
+.form__input-number-field {
+  margin-top: 50px;
+  display: flex;
+}
+
+.form__input-number-field__input,
+.form__input-email-field__input {
+  padding-left: 8px;
+  background: #EBEDF0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+.form__input-number-field__input {
+  order: 1;
+  width: 50px;
+}
+
+.form__input-email-field {
+  margin-top: 24px;
+  display: flex;
+}
+
+.form__input-mailing-field__subtitle {
+  font-size: 18px;
+  color: #828282;
+}
+
+.form__input-mailing-field {
+  display: flex;
+  margin-top: 48px;
+}
+
+.form__input-mailing-field__input {
+  margin-left: 12px;
+  transform: scale(1.5);
+}
+
+.form__input-mailing-field__input:checked {
+  background: #4986CC;
+}
+
+.form__container_button {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.form__container_button__button_vk {
+  margin: auto;
+  background: #4986CC;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  height: 44px;
+  width: 351px;
+  font-size: 17px;
+  outline: none;
+  cursor: pointer;
+}
+
+.mobile-dev-input:checked + .mobile-dev-label {
+  background: #EBEDF0;
+}
+
+.web-dev-input:checked + .web-dev-label {
+  background: #EBEDF0;
+}
+
+.backend-dev-input:checked + .backend-dev-label {
+  background: #EBEDF0;
+}

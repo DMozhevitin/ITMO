@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>05-a11y</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <form>
+      <section>
+        <article class="form__title">
+          Запись на хакатон ВКонтакте
+        </article>
+        <p class="subtitle form__subtitle">Примите участие в нашем увлекательном мероприятии в составе команды от 2 до 4 человек</p>
+
+        <section class="form__input-number-field">
+          <input class="form__input-number-field__input" id="team-size" type="number" min="2" max="4" value="2">
+          <label for="team-size"><span class="subtitle form__input-number-field_subtitle">Количество участников</span></label>
+        </section>
+
+        <section class="form__input-radio-field">
+          <p class="subtitle form__input-radio-field__subtitle">Трек</p>
+          <input class="form__input-radio-field__input mobile-dev-input " checked type="radio" name="track" id="mobile-dev"/>
+          <label class="form__input-radio-field__label mobile-dev-label" for="mobile-dev"><span>Mobile</span></label>
+          <input class="form__input-radio-field__input web-dev-input"  type="radio" name="track" id="web-dev"/>
+          <label class="form__input-radio-field__label web-dev-label" for="web-dev"><span>Web</span></label>
+          <input class="form__input-radio-field__input backend-dev-input"  type="radio" name="track" id="backend-dev"/>
+          <label class="form__input-radio-field__label backend-dev-label" for="backend-dev"><span>Backend</span></label>
+        </section>
+
+        <section class="form__input-email-field">
+          <label class="subtitle form__input-email-field__subtitle" for="captain-email">Email капитана</label>
+          <input class="form__input-email-field__input" id="captain-email" type="email"/>
+        </section>
+
+
+        <section class="form__input-mailing-field">
+          <label class="form__input-mailing-field__subtitle" for="mailing">Получать новости о следующих мероприятиях</label>
+          <input class="form__input-mailing-field__input" type="checkbox" id="mailing"/>
+        </section>
+
+
+        <section class="form__container_button">
+          <button class="form__container_button__button_vk">
+            Подтвердить
+          </button>
+        </section>
+
+      </section>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+C:\web\hw7\src\main\java\ru\itmo\wp\controller\UsersPage.java
+C:\web\hw7\src\main\java\ru\itmo\wp\service\UserService.java
+C:\web\hw7\src\main\java\ru\itmo\wp\controller\Page.java
+C:\web\hw7\src\main\java\ru\itmo\wp\form\validator\UserCredentialsEnterValidator.java
+C:\web\hw7\src\main\java\ru\itmo\wp\repository\UserRepository.java
+C:\web\hw7\src\main\java\ru\itmo\wp\WpApplication.java
+C:\web\hw7\src\main\java\ru\itmo\wp\controller\EnterPage.java
+C:\web\hw7\src\main\java\ru\itmo\wp\form\UserCredentials.java
+C:\web\hw7\src\main\java\ru\itmo\wp\controller\IndexPage.java
+C:\web\hw7\src\main\java\ru\itmo\wp\controller\RegisterPage.java
+C:\web\hw7\src\main\java\ru\itmo\wp\form\validator\UserCredentialsRegisterValidator.java
+C:\web\hw7\src\main\java\ru\itmo\wp\domain\User.java

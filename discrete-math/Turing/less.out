@@ -1,0 +1,83 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s 0 -> markl 0 ^
+s 1 -> markl 1 ^
+
+markl 0 -> id1 a >
+markl 1 -> id1 b >
+markl < -> cl < >
+
+cl $ -> cl $ >
+cl x -> cl x >
+cl y -> cl y >
+cl 1 -> ac 1 ^
+cl 0 -> ac 0 ^ 
+cl _ -> bg _ <
+
+bg x -> bg x <
+bg y -> bg y <
+bg $ -> bg $ <
+bg < -> tocmp < >
+
+tocmp x -> cmp0 $ <
+tocmp y -> cmp1 $ <
+tocmp $ -> tocmp $ >
+
+id1 0 -> id1 0 >
+id1 1 -> id1 1 > 
+id1 < -> markr < >
+
+markr x -> markr x >
+markr y -> markr y >
+markr 1 -> back y <
+markr 0 -> back x <
+markr _ -> rj _ ^
+
+back x -> back x <
+back y -> back y <
+back < -> back < <
+back 0 -> back 0 <
+back 1 -> back 1 <
+back a -> markl a >
+back b -> markl b >
+
+id2 $ -> id2 $ >
+id2 0 -> cmp0 $ <
+id2 1 -> cmp1 $ <
+id2 _ -> rj _ ^
+
+cmp1 $ -> cmp1 $ <
+cmp1 < -> cmp1 < <
+cmp1 x -> cmp1 x <
+cmp1 y -> cmp1 y <
+cmp1 a -> cmp1 a <
+cmp1 b -> cmp1 b <
+cmp1 _ -> cmp1_2 _ >
+
+cmp1_2 a -> ac a ^
+cmp1_2 b -> ifend _ >
+
+cmp0 $ -> cmp0 $ <
+cmp0 < -> cmp0 < <
+cmp0 x -> cmp0 x <
+cmp0 y -> cmp0 y <
+cmp0 a -> cmp0 a <
+cmp0 b -> cmp0 b <
+cmp0 _ -> cmp0_2 _ >
+
+cmp0_2 b -> rj b ^
+cmp0_2 a -> ifend _ >
+
+ifend < -> rj < ^
+ifend a -> gtocmp a ^
+ifend b -> gtocmp b ^
+
+gtocmp a -> gtocmp a >
+gtocmp b -> gtocmp b >
+gtocmp < -> gtocmp < >
+gtocmp $ -> gtocmp $ >
+gtocmp x -> cmp0 $ <
+gtocmp y -> cmp1 $ <

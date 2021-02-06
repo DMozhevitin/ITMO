@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+.header-title {
+    margin: auto;
+    font-size: 32px;
+}
+
+.yandex::first-letter {
+    color: red;
+}
+
+.selected {
+    background: yellow;
+}
+
+input {
+    width: 300px;
+    line-height: 22px;
+    font-size: 18px;
+    margin-left: 32px;
+
+    margin-top: 64px;
+}
+
+li {
+    list-style-type: none;
+    border-bottom: 1px solid #d3d3d3;
+    padding: 4px;
+    cursor: pointer;
+}
+
+ul {
+    padding-left: 0;
+    width: 300px;
+    border: 1px solid #d3d3d3;
+    margin-top: 0;
+    margin-left: 32px;
+}
+
+section {
+    display: inline-block;
+}

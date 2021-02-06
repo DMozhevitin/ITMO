@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Яндекс</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+    <input type="checkbox" id="show-settings-checkbox" class="show-settings-checkbox"/>
+    <input checked type="checkbox" id="jokes-checkbox" class="settings-checkbox jokes-checkbox">
+    <input checked type="checkbox" id="tv-checkbox" class="settings-checkbox tv-checkbox">
+    <input checked type="checkbox" id="car-checkbox" class="settings-checkbox car-checkbox">
+    <input type="checkbox" id="refresh-jokes-checkbox" class="refresh-jokes-checkbox"/>
+
+    <article class="settings-popup">
+
+      <section class="settings-popup__item">
+        <span>Лучшие анекдоты</span>
+      </section> 
+      
+      <section class="settings-popup__item">
+        <span>Телепрограмма</span>
+      </section>  
+
+      <section class="settings-popup__item">
+        <span>Автомобильные новости</span>
+      </section>  
+
+    </article>
+
+      <header class="topbar">
+        <section class="topbar__location">
+          <img src="img/geo-arrow-ic.png" class="geo-icon" alt="geo icon"/>
+          <p class="gray-text topbar__location_current">
+            Санкт-Петербург
+          </p>
+        </section>
+  
+        <section class="topbar__settings">
+          <label for="show-settings-checkbox">
+            <span class="topbar__settings_text">Настройка</span>
+          </label>
+        </section>
+      </header>
+      
+      <aside class="aside">
+        <section class="login">
+          <p class="user-login ya-text bold-text">DMozhevitin</p>
+          <p>Почта <span class="bold-text">&nbsp228</span></p>  
+        </section>
+      </aside>
+
+      <section class="body-top">
+        <section class="body-top__left-section">
+          <section class="body-top__left-section__header">
+            <a 
+            href="https://yandex.ru/news?mlid=1605212911.glob_225&msid=1605213915.80206.94602.4281&utm_medium=topnews_news&utm_source=morda_desktop" 
+            class="header-tab header-tab_big visited-link">
+              Сейчас в СМИ
+            </a>
+  
+            <a 
+            href="https://yandex.ru/news/region/saint_petersburg?mlid=1605212911.geo_2&msid=1605213915.80206.94602.4281&utm_medium=topnews_region&utm_source=morda_desktop" 
+            class="header-tab header-tab_big">
+              В Санкт-Петербурге
+            </a>
+  
+            <p class="header-tab small-text current-time gray-text time-tab">
+              12 ноября, четверг 02:28
+            </p>
+          </section>
+  
+          <ul class="body-top__left-section__list">
+            <li class="news-item">В кремле ответили на заявление экс-главы ЦРУ о "запуганном" Путиным Трампе</li>
+            <li class="news-item">В кремле ответили на заявление экс-главы ЦРУ о "запуганном" Путиным Трампе</li>
+            <li class="news-item">В кремле ответили на заявление экс-главы ЦРУ о "запуганном" Путиным Трампе</li>
+            <li class="news-item">В кремле ответили на заявление экс-главы ЦРУ о "запуганном" Путиным Трампе</li>
+            <li class="news-item">В кремле ответили на заявление экс-главы ЦРУ о "запуганном" Путиным Трампе</li>
+            <li class="news-item">В кремле ответили на заявление экс-главы ЦРУ о "запуганном" Путиным Трампе</li>
+          </ul>
+  
+          <section class="body-top__left-section__footer">
+            <section class="body-top__left-section__footer__currency">
+              <p class="currency-item bold-text"> 
+                USD ЦБ    
+              </p>
+                
+              <p class="currency-item"> 
+                33,33
+              </p>
+    
+              <p class="currency-item gray-text"> 
+                -0,11
+              </p>
+            </section>
+            
+            <section class="body-top__left-section__footer__currency">
+              <p class="currency-item bold-text"> 
+                EUR    
+              </p>
+                
+              <p class="currency-item"> 
+                43,43
+              </p>
+    
+              <p class="currency-item gray-text"> 
+                -0,10
+              </p>
+            </section>
+  
+            <section class="body-top__left-section__footer__currency">
+              <p class="currency-item bold-text"> 
+                НЕФТЬ  
+              </p>
+                
+              <p class="currency-item"> 
+                43,40
+              </p>
+    
+              <p class="currency-item gray-text"> 
+                -1,03%
+              </p>
+            </section>
+  
+            <p class="currency-item gray-text">
+              ...
+            </p>
+          </section>
+        </section>
+
+        <section class="body-top__right-section">
+          <img src="img/round-image.png" class="discount-img" alt="Скидка на маркете">
+          <a href="#" class="discount-name">Товары для животных <br/> со скидками</a>
+          <p class="ya-market">на Яндекс.Маркете</p> 
+        </section>
+      </section>
+
+      <img src="img/ya-logo.jpg" class="ya-logo" alt="Yandex logo"/>
+
+      <section class="search-field">
+        <section class="search-categories">
+          <a href="https://yandex.ru/video/" class="search-category">
+            Видео
+          </a>
+
+          <a href="https://yandex.ru/images/" class="search-category">
+            Картинки
+          </a>
+
+          <a href="https://yandex.ru/news/" class="search-category">
+            Новости
+          </a>
+
+          <a href="https://yandex.ru/maps/" class="search-category">
+            Карты
+          </a>
+
+          <a href="https://market.yandex.ru/" class="search-category">
+            Маркет
+          </a>
+
+          <a href="https://translate.yandex.ru/" class="search-category">
+            Переводчик
+          </a>
+
+          <a href="https://music.yandex.ru/" class="search-category">
+            Музыка
+          </a>
+
+          <a href="#" class="search-category">
+            ещё
+          </a>
+        </section>
+        <div class="input-wrapper">
+          <input class="search-input"/>
+          <img src="img/find_btn.png" alt="Найти" class="find-btn"/>
+          <img src="img/microphone.svg" alt="Голосовой ввод" class="mic-btn"/>
+          <img src="img/keyboard.svg" alt="Экранная клавиатура" class="keyboard-btn"/>
+        </div>
+        
+        <section class="search-example">
+          <p class="dark-text">
+            Найдётся всё.  
+          </p>
+
+          <p class="dark-text search-query-example">
+            Например, 
+          </p>
+
+          <p class="gray-text search-query-example-cont">
+            &nbsp;выхожу один я на дорогу
+          </p>
+        </section>
+      </section>
+
+      <section class="ad-wrapper">
+        <img src="img/ad.png" class="ad-img" alt="Advertisment"/>
+      </section>
+
+      <section class="widgets">
+        
+        <div class="joke-widget-wrapper widget">
+          <section class="jokes-widget-1">
+            <a href="#" class="widget__title ya-link">Лучшие анекдоты</a>
+            <ul class="widget__list">
+              <li class="widget__list-item">Прочитал легенду про Прометея. Просто огонь!</li>
+              <li class="widget__list-item">Оббиваю двери кожей заказчика.</li>
+              <li class="widget__list-item">Курение как онанизм - все занимаются, но все отрицают.</li>
+              <li class="widget__list-item">В Монголии пройдет шествие Бессмертная орда.</li>
+              <li class="widget__list-item">Если работаешь на дядю, на тетю не заработаешь.</li>
+            </ul>
+          </section>
+  
+          <section class="jokes-widget-2">
+            <a href="#" class="widget__title ya-link">Лучшие анекдоты</a>
+            <ul class="widget__list">
+              <li class="widget__list-item">Многие дамы потому непобедимы, что их никто не хочет побеждать.</li>
+              <li class="widget__list-item">Джо Байден призвал Дзюбу не отвлекать мировую общественность от его победы.</li>
+              <li class="widget__list-item">Дзюбоист - футболист, играющий рукой.</li>
+              <li class="widget__list-item">У молодежи три пути: вэбкам, закладки и айти.</li>
+              <li class="widget__list-item">Настоящие петербуржцы всегда говорят членораздельно.</li>
+            </ul>
+          </section>
+        </div>
+        
+
+        <section class="widget-TV widget">
+          <a href="#" class="widget__title ya-link">Телепрограмма</a>
+          <ul class="widget__list">
+            <li class="widget__list-item">16:00 &nbsp; Понять.Простить. <span class="gray-text">41 Домашний</span></li>
+            <li class="widget__list-item">16:00 &nbsp; Понять.Простить. <span class="gray-text">41 Домашний</span></li>
+            <li class="widget__list-item">16:00 &nbsp; Понять.Простить. <span class="gray-text">41 Домашний</span></li>
+            <li class="widget__list-item">16:00 &nbsp; Понять.Простить. <span class="gray-text">41 Домашний</span></li>
+            <li class="widget__list-item">16:00 &nbsp; Понять.Простить. <span class="gray-text">41 Домашний</span></li>
+            <li class="widget__list-item">16:00 &nbsp; Понять.Простить. <span class="gray-text">41 Домашний</span></li>
+          </ul>
+        </section>
+        
+        <section class="widget-car widget">
+          <a href="#" class="widget__title ya-link">Автомобильные новости</a>
+          <div class="shadow shadow-top"></div>
+          <ul class="widget__list widget-car__list">
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+            <li class="widget__list-item">Правительство поддержало законопроект о регистрации машиномест <span class="gray-text small-text">22:28</span></li>
+          </ul>
+          <div class="shadow shadow-bottom"></div>
+        </section>
+      </section>
+
+      <label class="refresh-jokes-label" for="refresh-jokes-checkbox">
+        <span class="refresh-jokes">
+          <img src="img/refresh.svg" alt="Обновить" class="refresh-jokes__refresh-img"/>
+          <span class="refresh-jokes__text ya-link">Показать еще</span>
+        </span>
+      </label>
+      
+  
+  </body>
+</html>

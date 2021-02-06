@@ -1,0 +1,62 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s 0 -> markl 0 ^
+s 1 -> markl 1 ^
+
+markl 0 -> id1 a >
+markl 1 -> id1 b >
+
+id1 1 -> id1 1 >
+id1 0 -> id1 0 >
+id1 _ -> markr _ <
+id1 a -> id1 a >
+id1 b -> id1 b >
+id1 x -> id1 x >
+id1 y -> id1 y >
+
+markr 0 -> checkmid x <
+markr 1 -> checkmid y < 
+markr x -> markr x <
+markr y -> markr y < 
+
+checkmid 0 -> idr 0 ^
+checkmid 1 -> idr 1 ^
+checkmid a -> startcheck a >
+checkmid b -> startcheck b >
+
+startcheck y -> check1 1 <
+startcheck x -> check0 0 <
+
+check1 a -> check1 a <
+check1 b -> check1 b <
+check1 0 -> check1 0 <
+check1 1 -> check1 1 <
+check1 _ -> leftest1 _ >
+
+check0 a -> check0 a <
+check0 b -> check0 b <
+check0 1 -> check0 1 <
+check0 0 -> check0 0 <
+check0 _ -> leftest0 _ >
+
+leftest1 a -> rj a ^
+leftest1 b -> id3 _ >
+
+leftest0 a -> id3 _ >
+leftest0 b -> rj b ^
+
+id3 a -> id3 a >
+id3 b -> id3 b >
+id3 0 -> id3 0 >
+id3 1 -> id3 1 >
+id3 x -> startcheck x ^
+id3 y -> startcheck y ^
+id3 _ -> ac _ ^
+
+idr 0 -> idr 0 <
+idr 1 -> idr 1 <
+idr a -> markl a >
+idr b -> markl b >

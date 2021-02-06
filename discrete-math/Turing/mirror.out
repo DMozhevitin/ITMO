@@ -1,0 +1,28 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+
+s 0 -> s 0 >
+s 1 -> s 1 >
+s _ -> back $ <
+back 0 -> carry0 $ >
+back 1 -> carry1 $ >
+back _ -> finish _ >
+finish $ -> ac _ >
+carry0 1 -> write0 1 >
+carry0 0 -> write0 0 >
+carry0 $ -> write0 0 >
+carry1 $ -> write1 1 >
+carry1 1 -> write1 1 >
+carry1 0 -> write1 0 >
+write0 0 -> write0 0 >
+write0 1 -> write0 1 >
+write0 _ -> backto$ 0 <
+write1 0 -> write1 0 >
+write1 1 -> write1 1 >
+write1 _ -> backto$ 1 <
+backto$ 0 -> backto$ 0 <
+backto$ 1 -> backto$ 1 <
+backto$ $ -> back $ <
+

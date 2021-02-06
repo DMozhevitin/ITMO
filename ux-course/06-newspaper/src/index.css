@@ -1,0 +1,132 @@
+@font-face {
+	font-family: 'SF Pro Text';
+	src: url(fonts/SFProDisplay-Regular.woff2) format('woff2')
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+header {
+	height: 100px;
+	display: flex;
+	
+	border-bottom: 1px solid black;
+}
+
+.header__title {
+	margin: auto;
+	font-size: 38px;
+}
+
+.subheader {
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	height: 50px;
+	font-size: 24px;
+	margin-left: 3px;
+	border-bottom: 1px solid black;
+}
+
+.subheader__text {
+	margin: auto;
+}
+
+main {
+	margin-top: 24px;
+	display: flex;
+	flex-direction: row;
+}
+
+main .article__note {
+	padding-left: 4px;
+	border-left: 3px solid #d1bc8a;
+	margin-top: 0;
+	hyphens: auto;
+}
+
+.article__note::first-letter {
+	font-size: 1.3em;
+}
+
+.main__article_wide {
+	width: 40%;
+	column-count: 2;
+}
+
+.main__article {
+	width: 20%;
+}
+
+.img-wrapper {
+	z-index: 1;
+	padding: 5px;
+	column-span: all;	
+}
+
+.article-img {
+	width: 100%;
+}
+
+footer {
+	height: 50px;
+	border-top: 1px solid black;
+	margin-top: 75px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.toggle {
+	display: none;
+}
+
+.main__content-wrapper {
+	background: #f0e5dd;
+	font-family: 'SF Pro Text', Helvetica, sans-serif;
+}
+
+.enable-light-theme {
+	display: none;
+}
+
+.decrease-font-size {
+	display: none;
+}
+
+.dark-theme-toggle:checked ~ .main__content-wrapper {
+	background: #38444c;
+	color: #f0f2f3;
+}
+
+.dark-theme-toggle:checked ~ .main__content-wrapper .enable-dark-theme {
+	display: none;
+}
+
+.dark-theme-toggle:checked ~ .main__content-wrapper .enable-light-theme {
+	display: inline-block;
+}
+
+
+.font-size-toggle:checked ~ .main__content-wrapper {
+	font-size: 1.2rem;
+}
+
+.font-size-toggle:checked ~ .main__content-wrapper .increase-font-size {
+	display: none;
+}
+
+.font-size-toggle:checked ~ .main__content-wrapper .decrease-font-size {
+	display: inline-block;
+}
+
+.font-style-toggle:checked ~ .main__content-wrapper {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer .menu-item {
+	margin: auto;
+	cursor: pointer;
+}

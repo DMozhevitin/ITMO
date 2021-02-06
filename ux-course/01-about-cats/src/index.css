@@ -1,0 +1,98 @@
+body {
+	font-family: arial;
+}
+
+.cat-photo {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.cat-desc-long, .cat-name, .cat-desc-short {
+	margin-left: 15px;
+}
+
+.cat-name, .cat-age, .cat-breed, .cat-health {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.cat-name {
+	display: block;
+
+	margin-top: 8px;
+	font-size: 22px;
+	margin-bottom: 0;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	text-decoration: none;
+	color: black; 
+}
+
+.cat-name:hover {
+	color: red;
+}
+
+.cat-desc-long, .cat-desc-short {
+	margin-top: 8px;
+	color: gray;
+	font-size: 14px;
+}
+
+.cat-card {
+	display: inline-block;
+	width: 300px;
+	border: 1px solid #d3d3d3;
+	margin: 15px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.cat-card:hover {
+	 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.toggle {
+	display: none;
+}
+
+.toggle + .lines {
+	height: 30px;
+	width: 30px;
+	margin-left: 15px;
+	display: block;
+	background: url(img/lines.svg) no-repeat;
+	cursor: pointer;
+}
+
+.toggle:checked + .lines {
+	transform: rotate(-90deg);
+}
+
+.toggle:checked ~ .cat-card {
+	display: block;
+	width: 500px;
+}
+
+.cat-desc-long {
+	display: none;
+}
+
+.toggle:checked ~ .cat-card .cat-desc-long {
+	display: block;
+}
+
+.toggle:checked ~.cat-card .cat-desc-short {
+	display: none;
+}
+
+.toggle:checked ~ .cat-card .cat-photo {
+	height: 300px;
+}
+
+.yandex:first-letter {
+	color: red; /* :) */
+}
