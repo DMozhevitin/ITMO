@@ -1,4 +1,4 @@
-# Discrete Math
+# Discrete Math course
 
 ### Laboratory works
 
