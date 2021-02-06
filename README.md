@@ -1,4 +1,4 @@
-# ITMO University courses passed by me:
+# Homework and laboratory work solutions from the following courses:
 
 - **[Algorithms and Data Structures](https://github.com/DMozhevitin/ITMO/tree/main/algorithms-and-data-structures)**
 - **[Discrete Math](https://github.com/DMozhevitin/ITMO/tree/main/discrete-math)**
