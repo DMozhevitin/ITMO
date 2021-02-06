@@ -1,13 +1,5 @@
-# Задача «Про котиков»
-## Доступные команды
+# Task 1: About cats
 
-> Перед тем, как запускать приведенные ниже команды, необходимо установить зависимости с помощью команды `npm install`
-
-Запускаются так: `npm run <command>`
-
-| Команда   | Действие               |
-| --------- | ---------------------- |
-| lint      | Проверка кода линтером |
-| lint:html | Линтинг HTML           |
-| lint:css  | Линтинг CSS            |
-| format    | Форматирование кода    |
+![alt](https://raw.githubusercontent.com/DMozhevitin/ITMO/main/ux-course/images/01/01.png?token=ALNGHUZRRIY7EUF2QI4LJ2LAD4EFI)
+______________________________________________________________________________________________________________________________
+![alt](https://raw.githubusercontent.com/DMozhevitin/ITMO/main/ux-course/images/01/02.png?token=ALNGHU7TZOWLBT74DOHL4JDAD4EEE)
