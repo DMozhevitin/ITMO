@@ -1,4 +1,6 @@
-# Homeworks and laboratory works solutions from the following courses:
+# ITMO University:
+
+## Homeworks and laboratory works solutions from the following courses
 
 - **[Algorithms and Data Structures](https://github.com/DMozhevitin/ITMO/tree/main/algorithms-and-data-structures)**
 - **[Discrete Math](https://github.com/DMozhevitin/ITMO/tree/main/discrete-math)**
