@@ -9,9 +9,9 @@
 - **[Operating Systems](https://github.com/DMozhevitin/ITMO/tree/main/operating-systems)**
 - **[Mathematical Logic](https://github.com/DMozhevitin/ITMO/tree/main/math-logic)**
 - **[Java Advanced](https://github.com/DMozhevitin/ITMO/tree/main/java-advanced)**
-- **[Functional Programming](https://github.com/DMozhevitin/ITMO/tree/main/functional-programming)**
+- **[UX](https://github.com/DMozhevitin/ITMO/tree/main/ux-course)**
 - **[Javascript](https://github.com/DMozhevitin/ITMO/tree/main/js-course)**
+- **[Functional Programming](https://github.com/DMozhevitin/ITMO/tree/main/functional-programming)**
 - **[Machine Learning](https://github.com/DMozhevitin/ITMO/tree/main/machine-learning)**
 - **[Parallel Programming](https://github.com/DMozhevitin/ITMO/tree/main/parallel-programming)**
 - **[Translation Methods](https://github.com/DMozhevitin/ITMO/tree/main/translation-methods)**
-- **[UX](https://github.com/DMozhevitin/ITMO/tree/main/ux-course)**
